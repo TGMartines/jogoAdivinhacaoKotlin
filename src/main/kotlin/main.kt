@@ -4,6 +4,7 @@ fun main() {
     var min = 1
     var max = 100
     var acertou = false
+    var tentativas = 0
 
     println("Pense em um número de 1 à 100.")
     while(!acertou) {
@@ -13,11 +14,12 @@ fun main() {
         when(resposta) {
             "a" -> {
                 acertou = true
-                println("Ahaaaaaa, eu sabia! Adivinhei.")
+                println("Ahaaaaaa, eu sabia! Adivinhei em $tentativas tentativas.")
             }
             "+" -> min = numeroAdivinhado + 1
             "-" -> max = numeroAdivinhado - 1
             else -> println("Opção inválida!")
         }
+        tentativas ++
     }
 }
