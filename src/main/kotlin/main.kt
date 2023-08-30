@@ -8,9 +8,9 @@ fun main() {
 
     println("Pense em um número de 1 à 100.")
     while(!acertou) {
-        var numeroAdivinhado = Random.nextInt(min, max + 1)
+        val numeroAdivinhado = Random.nextInt(min, max + 1)
         println("Eu adivinho: $numeroAdivinhado. Acertei (a), o número correto é maior (+), o número correto é menor (-).")
-        var resposta = readLine()
+        val resposta = readLine()
         when(resposta) {
             "a" -> {
                 acertou = true
